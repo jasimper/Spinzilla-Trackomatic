@@ -1,7 +1,7 @@
 <div class="header">
   <% if current_user %>
   <%= link_to icon('home'), root_path, class: 'home__link'%>
-    Welcome to Spinzilla Track-o-matic, <%= current_user.username %> | <%= link_to '[ logout ]', '/users/sign_out' %>
+    Welcome to Spinzilla Track-o-matic, <%= link_to current_user.username, edit_user_registration_path %> | <%= link_to '[ logout ]', '/users/sign_out' %>
   <% else %>
     <%= link_to '[ login ]', '/users/sign_in' %> | <%= link_to '[ signup ]', 'sign_up' %>
   <% end %>
