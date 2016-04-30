@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_many :yarns
+  has_many :yarns, dependent: :destroy
 
   validates :username, presence: true
 end
