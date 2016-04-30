@@ -21,7 +21,7 @@ gem "administrate-field-image"
 
 gem 'puma'
 
-gem 'rollbar', '~> 1.2.7'
+gem 'rollbar', '~> 2.8.3'
 
 gem 'jquery-rails', '>= 3.0.0'
 
