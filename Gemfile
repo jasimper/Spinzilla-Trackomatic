@@ -3,8 +3,9 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.2.3'
 
-gem 'rails_12factor', group: :production
-
+group :production do
+  gem 'rails_12factor'
+end
 gem 'pg'
 
 gem 'sass-rails', '~> 5.0'
