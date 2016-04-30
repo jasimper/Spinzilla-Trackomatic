@@ -1,0 +1,134 @@
+// Google Fonts
+@import url(https://fonts.googleapis.com/css?family=Maven+Pro);
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+html,
+body {
+  font-family: 'Maven Pro', Helvetica Neue, Arial, sans-serif;;
+  font-size: 16px;
+  line-height: 20px;
+  color: #333333;
+  margin: 0;
+  height: 100%;
+  background-image: url('yarn.jpg');
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.main {
+  min-height: 100%;
+  position: relative;
+}
+.content {
+  padding: 10px 20px 50px 20px;
+}
+h1, h3 a {
+  color: #FFFFFF;
+}
+a {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  color: #444444;
+  &:hover {
+    border-bottom: 1px solid;
+  }
+}
+.notice, .alert {
+  background-color: rgba(33, 33, 33, 0.5);
+  line-height: 1.5rem;
+  padding-left: 10px;
+  color: #FFFFFF;
+}
+.spinzilla__rules {
+  width: 80%;
+  background-color: rgba(238, 238, 238, 0.8);
+  padding: 20px;
+  margin: 20px auto;
+}
+.login, .signup {
+  display: inline-block;
+  width: 30%;
+  @media all and (max-width: 900px) {
+    width: 45%;
+  }
+  @media all and (max-width: 750px) {
+    display: block;
+    width: 80%;
+  }
+}
+.loginXL {
+  display: inline-block;
+  width: 60%;
+  @media all and (max-width: 750px) {
+    display: block;
+    width: 80%;
+  }
+}
+.cancel {
+  width: 30%;
+  background-color: rgba(238, 238, 238, 0.8);
+  margin: 10px 50px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  vertical-align: top;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+}
+.login__signup {
+  background-color: rgba(238, 238, 238, 0.8);
+  margin: 10px 50px;
+  width: 100%;
+  padding: 20px;
+  font-size: 1.2rem;
+}
+.field input {
+  width: 80%;
+  line-height: 1.5rem;
+  font-size: 1.2rem;
+  margin: 5px 0 10px 0;
+  @media all and (max-width: 900px) {
+    width: 100%;
+  }
+}
+.field input[type=checkbox] {
+  width: 20px;
+}
+.remember label {
+  font-size: 0.8rem;
+}
+.devise__links {
+  font-size: 1rem;
+  padding-top: 10px;
+}
+.welcome {
+  background-color: rgba(238, 238, 238, 0.8);
+  margin: 10px 50px;
+  width: 50%;
+  padding: 10px 20px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  vertical-align: top;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  @media all and (max-width: 900px) {
+    width: 40%;
+  }
+  @media all and (max-width: 750px) {
+  display: block;
+  position: relative;
+  width: 80%;
+  }
+}
+p a {
+  color: #FF0066;
+}

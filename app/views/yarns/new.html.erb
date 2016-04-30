@@ -1,0 +1,46 @@
+<h1>Add Yarn!</h1>
+
+<%= form_for :yarn, url: '/yarns' do |f| %>
+  <% if @yarn.errors.full_messages.present? %>
+    <ul class="errors">
+      <% @yarn.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+<div class="table">
+  <div class="table__row">
+    <div class="table__head table__40">Name/Description</div>
+    <div class="table__head table__20">Measured Yardage</div>
+    <div class="table__head table__20">Number of Plies</div>
+    <div class="table__head table__10">Add</div>
+  </div>
+  <div class="table__row">
+    <div class="table__cell">
+      <%= f.text_field :name %>
+    </div>
+    <div class="table__cell">
+      <%= f.number_field :measured_yardage, step: 0.01 %>
+    </div>
+    <div class="table__cell">
+      <%= f.number_field :number_of_plies %>
+    </div>
+    <div class="table__cell">
+      <%= f.submit "[add yarn]", class: "submit__link" %>
+    </div>
+  </div>
+</div>
+<% end %>
+<div class="spinzilla__rules">
+  <h2> Please be sure to read the plying credit rules below before adding new handspun.</h2>
+  <p>From <a href="http://www.spinzilla.org/" target="_blank">Spinzilla</a>'s website:
+    <blockquote>
+      <p>Can I ply my yarn?</p>
+<p>All yarn must be spun during Spinzilla—singles and plied yarn. If you choose to ply your yarn during Spinzilla, we will give you credit for the plying! Plying is “spinning” and measuring plied yarn is easier than measuring singles yarn. This is totally optional—you don’t have to ply your yarn at all.</p>
+<p>The formula works like this:</p>
+<p>[plied yardage] + [plied yardage x # of plies] = yardage for which you can claim credit</p>
+<p>Chain or Navajo ply is a 3-ply yarn.</p>
+<p>The intention of giving plying credit is to make measuring your yarn easier. You may only claim credit for plying once per skein. Techniques such as cable plying where you ply twice are only eligible for plying credit once. Plying with a commercial binder is not eligible for plying credit. All singles used in plying must be spun during Spinzilla.</p>
+    </blockquote>
+  </p>
+</div>

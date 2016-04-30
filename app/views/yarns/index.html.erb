@@ -1,0 +1,53 @@
+<h1>Current Handspun</h1>
+<h3>
+<%= link_to icon('plus-circle', 'Add New Handspun?'), new_yarn_path %>
+</h3>
+<% if @yarns.length == 0 %>
+<div class="no__yarns">
+  <p>You currently have no handspun added. Please <%= link_to 'add', new_yarn_path %> your Spinzilla spinning now to get your current total.</p>
+</div>
+
+<% else %>
+<div class="table">
+  <div class="table__row">
+    <div class="table__head  table__40">Name/Description</div>
+    <div class="table__head  table__20">Measured Yardage</div>
+    <div class="table__head  table__10">Number of Plies</div>
+    <div class="table__head  table__10">Yardage Credit</div>
+    <div class="table__head  table__10">Edit</div>
+    <div class="table__head  table__10">Delete</div>
+  </div>
+  <% @yarns.each do |y| %>
+  <div class="table__row">
+    <div class="table__cell">
+      <%= y.name %>
+    </div>
+    <div class="table__cell">
+      <%= y.drop_trailing_zero(y.measured_yardage) %>
+    </div>
+    <div class="table__cell">
+      <%= y.number_of_plies %>
+    </div>
+    <div class="table__cell">
+      <%= y.drop_trailing_zero(y.yardage_credit) %>
+    </div>
+    <div class="table__cell">
+      <%= link_to '[edit]', edit_yarn_path(y) %>
+    </div>
+    <div class="table__cell">
+      <%= link_to '[delete]',  y,  method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+  </div>
+  <% end %>
+</div>
+<div class="table">
+  <div class="table__cell table__40">
+    <h2>
+    <%= link_to icon('plus-circle', 'Add New Handspun?'), new_yarn_path %>
+    </h2>
+  </div>
+  <div class="table__cell total">
+  <h2>Total Spinzilla Yardage: <%= @current_user.drop_trailing_zero(@current_user.total_yardage) %></h2>
+  </div>
+</div>
+<% end %>
