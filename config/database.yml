@@ -83,3 +83,6 @@ production:
   database: spinzilla_trackomatic_production
   username: spinzilla_trackomatic
   password: <%= ENV['SPINZILLA_TRACKOMATIC_DATABASE_PASSWORD'] %>
+
+  url:  <%= ENV["DATABASE_URL"] %>
+  pool: <%= ENV["DB_POOL"] || ENV['RAILS_MAX_THREADS'] || 5 %>
