@@ -1,0 +1,30 @@
+.quickCalc {
+  width: 70%;
+  margin: 0 auto 20px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: solid 1px #CCCCCC;
+  @media all and (max-width: 900px) {
+    width: 90%;
+  }
+  legend {
+    font-size: 1.5rem;
+  }
+}
+.singlePly {
+  font-size: 0.9rem;
+  text-align: center;
+}
+.total {
+  display: inline;
+}
+.credit {
+  -webkit-appearance: textfield;
+  display: inline-block;
+  width: 131px;
+  background-color: #FFFFFF;
+  border-width: 2px;
+  border-style: inset;
+  border-color: #CCCCCC;
+  line-height: 1rem;
+}

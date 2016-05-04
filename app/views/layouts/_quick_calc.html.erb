@@ -1,0 +1,16 @@
+<p>If you prefer to continue as a guest and not save and track your totals, you can use the Quick Credit Calculator below.</p>
+<div class="quickCalc">
+  <form onsubmit="return false" oninput="credit.value = (measured.valueAsNumber * plies.valueAsNumber) + measured.valueAsNumber">
+    <legend>Quick Credit Calculator</legend>
+    <p>For credit calculation of a yarn with 2-plies or greater, enter your information below.</p>
+    <p><label for="measured">Measured Yardage:</label>
+    <input type="number" min="0" id="measured" name="measured"></p>
+
+    <p><label for="plies">Number of Plies:</label>
+    <input type="range" min="2" max="6" value="2" id="plies" name="plies" oninput="pliesOutput.value = plies.value">
+    <output name="pliesOutput" id="pliesOutput">2</output></p>
+
+    <p class="total">Total: <div class="credit"><output name="credit" for="measured plies">0</output></div></p>
+  </form>
+  <p class="singlePly">(Single ply yarns: total credit = measured yardage)</p>
+</div>
