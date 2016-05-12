@@ -1,5 +1,4 @@
 class YarnsController < ApplicationController
-  before_filter :authenticate_user!
   before_action :get_yarn, only: [:show, :edit, :update, :destroy]
 
   def index
